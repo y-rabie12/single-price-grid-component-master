@@ -16,7 +16,7 @@
 
 body{
     padding:1rem;
-    
+    background-color: var(--off-cyan);
 }
 
 
@@ -32,6 +32,7 @@ body{
 
 /*** Community Section ***/
 .community{
+    background-color: white;
     padding:1rem;
     border-radius: 10px 10px 0 0;
 }
@@ -123,9 +124,10 @@ body{
     }
     body{
         max-width: 700px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
     }
     .container{
         display: grid;
