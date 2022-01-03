@@ -1,148 +1,125 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: border-box;
-    font-family: 'Karla','sans-serif';
-   
+    box-sizing:border-box;
+    font-family:'Karla','sans-serif';
 }
+
 
 :root{
-    --Cyan:hsl(179, 62%, 43%);
-    --Bright-Yellow :hsl(71, 73%, 54%);
-    --Light-Gray:hsl(204, 43%, 93%);
-    --Grayish-Blue:hsl(218, 22%, 67%);
-    --off-cyan: hsla(179,62%,43%,0.699)
-}
-
-body{
-    padding:1rem;
-    background-color: var(--off-cyan);
+    --cyan:hsl(179, 62%, 43%);
+    --bright-yellow:hsl(71, 73%, 54%);
+    --grayish-blue:hsl(218, 22%, 67%);
+    --light-gray:hsl(204, 43%, 93%);
 }
 
 
 
+/*** Container Styling ***/ 
 
 .container{
-    width:80%;
-    margin: 10px auto;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-
-
-/*** Community Section ***/
-.community{
-    background-color: white;
+    width:80%; 
+    margin: 0 auto;
     padding:1rem;
-    border-radius: 10px 10px 0 0;
 }
+
+
+
+/*** Community Styling ***/ 
+
 
 .community h1{
-    color : var(--Cyan);
-    font-size:1rem;
-    font-weight:700;
+    color:cyan;
     margin: 0 0 1rem 0;
 }
 
 .days{
-    color:var(--Bright-Yellow);
-    font-size:0.7rem;
-    font-weight:400;
-    margin: 0 0 1rem 0;
+    color:var(--bright-yellow);
+    margin: 0 0 0.5rem 0;
 }
 
 .gain{
-    color:var(--Grayish-Blue);
-    font-size:0.7rem;
-    font-weight:400;
-    margin: 0 0 1rem 0;
+    color:var(--grayish-blue);
+    margin: 0 0 0.5rem 0;
 }
 
-/*** Pricing Section ***/
+/*** Pricing Styling ***/ 
 
 .pricing{
-    background-color:var(--Cyan);
-    color:var(--Light-Gray);
-    padding:0.9rem;
+    background-color: var(--cyan);
+    padding:1rem;
 }
 
 .pricing h1{
-    color:var(--Light-Gray);
-    font-size:1rem;
-    font-weight:700;
-    margin: 0 0  1rem 0;
+     font-size: 0.9rem;
+     color:#fff;
+     margin: 0 0 1rem 0 ;
 }
 
 .pricing span{
-    color:var(--Light-Gray);
     font-size:1.5rem;
-    font-weight:700;
-    margin-right:0.5rem;
+    color:#fff;
+    margin-right: 0.5rem;
 }
 
-.pricing p {
-    margin-bottom:1rem;
+.p2{
+    margin: 0 0 0.5rem 0;
+    color:var(--light-gray);
 }
 
+.p3{
+    font-size:0.8rem;
+    color:var(--light-gray);
+}
 
-.btn {
-    background-color: var(--Bright-Yellow);
+.btn{
     width:100%;
+    padding:1rem;
+    margin: 1rem auto;
+    background-color:var(--bright-yellow);
     border:none;
-    border-radius: 10px;
-    padding:0.8rem;
-    text-align:center;
-    color: var(--Light-Gray);
+    border-radius:10px;
+    color:#fff;
+    font-weight: 700;
 }
 
-/*** Why Us Section ***/
+/*** Why Us Styling ***/ 
 
 .reason{
-    background-color: var(--off-cyan);
-    padding:1rem;
-    border-radius:  0 0 10px 10px;
+    background-color:hsla(179, 62%, 43%,0.699);
+    padding:1.5rem;
 }
 
 .reason h1{
-    color:var(--Light-Gray);
-    font-size:1rem;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
+    color:#fff;
 }
 
-.reason p {
-    color:var(--Light-Gray);
+.reason p{
+    color:var(--light-gray);
 }
 
 
-
-@media screen and (min-width: 600px) {
-
-    html{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+@media (min-width:700px){
     body{
-        max-width: 700px;
-        position: fixed;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
+       max-width: 700px;
+       
     }
     .container{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: 0.5fr 1fr;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
     }
     .community{
         grid-column: span 2;
-        border-radius: 10px 10px 0 0;
+    }
+
+    .reason{
         padding:1rem;
     }
     .pricing{
-        border-radius:  0  0  0 10px;
+        padding:1rem;
     }
-    .reason{
-        border-radius: 0 0 10px 0;
+    .btn{
+       margin: 2rem auto 0 auto;
     }
 }
